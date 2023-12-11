@@ -1,9 +1,26 @@
 import pandas as pd
-import pathlib as pl
+import pathlib as p
 import RPS_dict as rps
 from random import choice
 
+#History route
+HISTORY = './src/history.csv'
+
+def get_data():
+    file = p.Path(HISTORY)
+    if file.is_file():
+        return pd.read_csv(HISTORY)
+    else:
+        return pd.DataFrame(columns=('agent_move', 'rival_move', 'result'))
+
+def store_data(agent_move, rival_move, result):
+    data = get_data()
+    data.loc[len(data)] = list((agent_move, rival_move, result))
+    data.to_csv(HISTORY, index=False)
+
+
 def get_agent_action():
+    data = get_data()
     action = rps.GameAction(choice(range(len(rps.GameAction))))
     print('The agent action is %s' % (action.name))
     return action
@@ -11,7 +28,10 @@ def get_agent_action():
 def game():
         agent_move = get_agent_action()
         computer_move = rps.get_computer_action()
-        return rps.assess_game(agent_move, computer_move).name
+        result = rps.assess_game(agent_move, computer_move).name
+
+        store_data(agent_move, computer_move, result)
+        return result
 
 
 if __name__ == '__main__':
