@@ -5,7 +5,7 @@ from data_utils import store_data
 
 def game():
         agent1_move = get_prediction_agent_action()
-        agent2_move = Cicle_agent.get_move()
+        agent2_move = rps.get_user_action()
         result = rps.assess_game(agent1_move, agent2_move).name
 
         store_data(agent1_move, agent2_move, result)
@@ -15,7 +15,11 @@ def game():
         return result
 
 if __name__ == '__main__':
-    number_of_games = int(input('Input a number of games: '))
-    for i in range(number_of_games):
-        print('\n=====  \033[1;93mGAME %i\033[0m  =====' % (i + 1))
-        game()
+    try:
+        number_of_games = int(input('Input a number of games: '))
+        for i in range(number_of_games):
+            print('\n=====  \033[1;93mGAME %i\033[0m  =====' % (i + 1))
+            game()
+    except KeyboardInterrupt:
+        print('\n\033[1;31mKeyBoard Interruption\033[0m')
+        print('\n\033[1mBYE!\033[0m')
