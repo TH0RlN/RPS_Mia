@@ -2,28 +2,7 @@ import pandas as pd
 import pathlib as p
 import RPS_dict as rps
 from random import choice
-
-#History route
-ROUTE = './src/'
-HISTORY = './src/history.csv'
-
-def get_data():
-    file = p.Path(HISTORY)
-    route = p.Path(ROUTE)
-
-    if not route.is_dir():
-         from os import mkdir
-         mkdir(ROUTE)
-
-    if file.is_file():
-        return pd.read_csv(HISTORY)
-    else:
-        return pd.DataFrame(columns=('agent_move', 'rival_move', 'result'))
-
-def store_data(agent_move, rival_move, result):
-    data = get_data()
-    data.loc[len(data)] = list((agent_move, rival_move, result))
-    data.to_csv(HISTORY, index=False)
+from data_utils import get_data, store_data
 
 
 def get_agent_action():
