@@ -4,10 +4,17 @@ import RPS_dict as rps
 from random import choice
 
 #History route
+ROUTE = './src/'
 HISTORY = './src/history.csv'
 
 def get_data():
     file = p.Path(HISTORY)
+    route = p.Path(ROUTE)
+
+    if not route.is_dir():
+         from os import mkdir
+         mkdir(ROUTE)
+
     if file.is_file():
         return pd.read_csv(HISTORY)
     else:
