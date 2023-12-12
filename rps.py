@@ -7,6 +7,15 @@ from data_utils import get_data, store_data
 
 def get_agent_action():
     data = get_data()
+
+    last_game = data.tail(1)
+    similar_games = data.loc[(data['agent_move'] == last_game['agent_move'].iloc[0]) & (data['rival_move'] == last_game['rival_move'].iloc[0])]
+    next_indexes = list(filter(lambda y: y < len(data), list(map(lambda x: x+1 , list(similar_games.index)))))
+    next_games = data.iloc[next_indexes]
+    next_rival = next_games['rival_move']
+    print(next_rival.value_counts())
+
+
     action = rps.GameAction(choice(range(len(rps.GameAction))))
     print('The agent action is %s' % (action.name))
     return action
