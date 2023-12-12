@@ -1,30 +1,6 @@
-import pandas as pd
-import pathlib as p
 import RPS_dict as rps
-from random import choice
-from data_utils import get_data, store_data
-
-
-def get_victory_action(move):
-    for action in rps.GameAction:
-        if not rps.assess_game(action, move):
-             return action  
-
-def get_prediction_agent_action():
-    data = get_data()
-
-    if len(data) > 4:
-        last_game = data.tail(1)
-        similar_games = data.loc[(data['agent_move'] == last_game['agent_move'].iloc[0]) & (data['rival_move'] == last_game['rival_move'].iloc[0])]
-        next_indexes = list(filter(lambda y: y < len(data), list(map(lambda x: x+1 , list(similar_games.index)))))
-        next_games = data.iloc[next_indexes]
-        next_rival = next_games['rival_move'].value_counts().head(1).index.tolist()[0]
-        action = rps.GameAction(get_victory_action(next_rival))
-    else:
-        action = rps.GameAction(choice(range(len(rps.GameAction))))
-
-    print('The agent action is %s' % (action.name))
-    return action
+from prediction_agent import get_prediction_agent_action
+from data_utils import store_data
 
 def game():
         agent_move = get_prediction_agent_action()
@@ -33,7 +9,6 @@ def game():
 
         store_data(agent_move, computer_move, result)
         return result
-
 
 if __name__ == '__main__':
     number_of_games = int(input('Input a number of games: '))
