@@ -17,5 +17,5 @@ def game():
 if __name__ == '__main__':
     number_of_games = int(input('Input a number of games: '))
     for i in range(number_of_games):
-        print('\n=====  \033[1;93mGAME %i\033[0m =====' % (i + 1))
+        print('\n=====  \033[1;93mGAME %i\033[0m  =====' % (i + 1))
         game()
