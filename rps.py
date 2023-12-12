@@ -1,10 +1,11 @@
 import RPS_dict as rps
 from prediction_agent import get_prediction_agent_action
+from cicle_agent import Cicle_agent
 from data_utils import store_data
 
 def game():
         agent_move = get_prediction_agent_action()
-        computer_move = rps.get_computer_action()
+        computer_move = Cicle_agent.get_move()
         result = rps.assess_game(agent_move, computer_move).name
 
         store_data(agent_move, computer_move, result)
