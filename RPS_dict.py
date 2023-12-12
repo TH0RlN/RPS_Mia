@@ -21,30 +21,30 @@ Victories = {
     GameAction.Scissors: GameAction.Rock
 }
 
-def assess_game(user_action, computer_action):
+def assess_game(player1, player2):
 
     game_result = None
 
-    if user_action == computer_action:
+    if player1 == player2:
         game_result = GameResult.Tie
 
     # You picked Rock
-    elif user_action == GameAction.Rock:
-        if computer_action == GameAction.Scissors:
+    elif player1 == GameAction.Rock:
+        if player2 == GameAction.Scissors:
             game_result = GameResult.Victory
         else:
             game_result = GameResult.Defeat
 
     # You picked Paper
-    elif user_action == GameAction.Paper:
-        if computer_action == GameAction.Rock:
+    elif player1 == GameAction.Paper:
+        if player2 == GameAction.Rock:
             game_result = GameResult.Victory
         else:
             game_result = GameResult.Defeat
 
     # You picked Scissors
-    elif user_action == GameAction.Scissors:
-        if computer_action == GameAction.Rock:
+    elif player1 == GameAction.Scissors:
+        if player2 == GameAction.Rock:
             game_result = GameResult.Defeat
         else:
             game_result = GameResult.Victory
