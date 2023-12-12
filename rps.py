@@ -4,15 +4,18 @@ from cicle_agent import Cicle_agent
 from data_utils import store_data
 
 def game():
-        agent_move = get_prediction_agent_action()
-        computer_move = Cicle_agent.get_move()
-        result = rps.assess_game(agent_move, computer_move).name
+        agent1_move = get_prediction_agent_action()
+        agent2_move = Cicle_agent.get_move()
+        result = rps.assess_game(agent1_move, agent2_move).name
 
-        store_data(agent_move, computer_move, result)
+        store_data(agent1_move, agent2_move, result)
+        print('Agent 1 move is %s' % (rps.GameAction(agent1_move).name))
+        print('Agent 2 move is %s' % (rps.GameAction(agent2_move).name))
+        print(result)
         return result
 
 if __name__ == '__main__':
     number_of_games = int(input('Input a number of games: '))
     for i in range(number_of_games):
         print('\n=====  \033[1;93mGAME %i\033[0m =====' % (i + 1))
-        print(game())
+        game()

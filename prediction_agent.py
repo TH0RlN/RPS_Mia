@@ -19,6 +19,4 @@ def get_prediction_agent_action():
         action = rps.GameAction(get_victory_action(next_rival))
     else:
         action = rps.GameAction(choice(range(len(rps.GameAction))))
-
-    print('The agent action is %s' % (action.name))
     return action
