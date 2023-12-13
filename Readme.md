@@ -1,5 +1,7 @@
 # Axente Intelixente para RPS
 
+Raúl Arias Pérez - IADB - IES de Teis
+
 ### O problema
 
 Estudo da solución básica ao xogo **pedra, papel, tesoiras** a través dun axente intelixente programado en Python
@@ -22,12 +24,13 @@ Estudo da solución básica ao xogo **pedra, papel, tesoiras** a través dun axe
 
 Optei por un axente reactivo baseado en modelos. O meu axente toma o historial de partidas xogadas, a partir de este colle a última partida xogada e busca a partida seguinte a todas as similares a esta. De este conxunto tomamos o movemento máis probable do rival e realizamos o movemento gañador contra este.
 
-
 ![img](src/img/Medio.png)
 
 ### Implementación
 
 A implentación de este axente está realizada en [Python 3.12](https://www.python.org/downloads/release/python-3120/) apoiandose na librería [Pandas](https://pandas.pydata.org/) e no código aportado por [dfleta](https://github.com/dfleta) no seu repositorio de [RPS](https://github.com/dfleta/pedra-papel-tesoira) (lixeiramente modificado para adaptarse as nosas necesidades). Todo o meu código atópase no [repositorio do proxecto](https://github.com/TH0RlN/RPS_Mia).
+
+Ademáis achégase un axente ciclico ao que poder enfrentar ao noso axente.
 
 ### Extensión - Pedra Papel Tesoiras Lagarto Spock (RPSLS)
 
