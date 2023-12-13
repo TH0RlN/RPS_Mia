@@ -1,3 +1,4 @@
+# This is a class that returns each possible game action in order
 class Cicle_agent:
     next_move = -1
 
