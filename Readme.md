@@ -24,7 +24,7 @@ Estudo da solución básica ao xogo **pedra, papel, tesoiras** a través dun axe
 
 Optei por un axente reactivo baseado en modelos. O meu axente toma o historial de partidas xogadas, a partir de este colle a última partida xogada e busca a partida seguinte a todas as similares a esta. De este conxunto tomamos o movemento máis probable do rival e realizamos o movemento gañador contra este.
 
-![img](src/img/Medio.png)
+![img](media/img/Medio.png)
 
 ### Implementación
 
@@ -35,4 +35,4 @@ Ademáis achégase un axente ciclico ao que poder enfrentar ao noso axente.
 ### Extensión - Pedra Papel Tesoiras Lagarto Spock (RPSLS)
 
 Engadiuse un diccionario extra, baseado no orixinal, que permite o uso do axente na versión extendida do xogo (RPSLS). A estructura do axente non precisa modificación para poder funcionar con esta versión extendida, mais precisa máis partidas para comenzar a ser efectivo ao ter máis posibilidades entre as que elixir.
-![img](src/img/rpsls.png)
+![img](media/img/rpsls.png)
