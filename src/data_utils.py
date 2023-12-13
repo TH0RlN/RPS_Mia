@@ -1,8 +1,9 @@
 import pandas as pd
 import pathlib as p
+import os
 
 #History route
-ROUTE = 'media/history'
+ROUTE =  os.path.dirname(__file__) + '/../media/history'
 TAIL = '.csv'
 
 # Retrieves the data from the csv
