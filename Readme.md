@@ -22,6 +22,9 @@ Estudo da solución básica ao xogo **pedra, papel, tesoiras** a través dun axe
 
 Optei por un axente reactivo baseado en modelos. O meu axente toma o historial de partidas xogadas, a partir de este colle a última partida xogada e busca a partida seguinte a todas as similares a esta. De este conxunto tomamos o movemento máis probable do rival e realizamos o movemento gañador contra este.
 
+
+![img](src/img/Medio.png)
+
 ### Implementación
 
 A implentación de este axente está realizada en Python 3.12 apoiandose na librería Pandas e no código aportado por dfleta no seu repositorio de RPS (lixeiramente modificado para adaptarse as nosas necesidades).
