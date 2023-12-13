@@ -1,5 +1,5 @@
 import pytest
-from RPSLS_dict import Game, GameResult, GameAction
+from src.RPSLS_dict import Game, GameResult, GameAction
 
 
 @pytest.fixture
