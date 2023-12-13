@@ -32,3 +32,4 @@ A implentación de este axente está realizada en [Python 3.12](https://www.pyth
 ### Extensión - Pedra Papel Tesoiras Lagarto Spock (RPSLS)
 
 Engadiuse un diccionario extra, baseado no orixinal, que permite o uso do axente na versión extendida do xogo (RPSLS). A estructura do axente non precisa modificación para poder funcionar con esta versión extendida, mais precisa máis partidas para comenzar a ser efectivo ao ter máis posibilidades entre as que elixir.
+![img](src/img/rpsls.png)
