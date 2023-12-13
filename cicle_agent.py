@@ -1,9 +1,8 @@
-from RPS_dict import GameAction
-
 class Cicle_agent:
     next_move = -1
 
     @staticmethod
-    def get_move():
+    def get_move(game):
+        rps = __import__(game)
         Cicle_agent.next_move += 1
-        return Cicle_agent.next_move % len(GameAction)
+        return Cicle_agent.next_move % len(rps.GameAction)

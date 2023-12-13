@@ -1,13 +1,14 @@
-import RPS_dict as rps
 from random import choice
 from data_utils import get_data
 
-def get_victory_action(move):
+def get_victory_action(move, game):
+    rps = __import__(game)
     for action in rps.GameAction:
         if not rps.assess_game(action, move):
              return action  
 
-def get_prediction_agent_action():
+def get_prediction_agent_action(game):
+    rps = __import__(game)
     data = get_data()
 
     if len(data) > 4:
@@ -18,7 +19,7 @@ def get_prediction_agent_action():
         next_rival = next_games['rival_move'].value_counts().head(1).index.tolist()
         if len(next_rival) > 0:
             next_rival = next_rival[0]
-            action = rps.GameAction(get_victory_action(next_rival))
+            action = rps.GameAction(get_victory_action(next_rival, game))
         else:
             action = rps.GameAction(choice(range(len(rps.GameAction))))
     else:

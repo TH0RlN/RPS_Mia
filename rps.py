@@ -5,8 +5,8 @@ from cicle_agent import Cicle_agent
 from data_utils import store_data
 
 def game():
-        agent1_move = get_prediction_agent_action()
-        agent2_move = Cicle_agent.get_move()
+        agent1_move = get_prediction_agent_action('RPS_dict')
+        agent2_move = Cicle_agent.get_move('RPS_dict')
         result = rps.assess_game(agent1_move, agent2_move).name
 
         store_data(agent1_move, agent2_move, result)

@@ -5,8 +5,8 @@ from cicle_agent import Cicle_agent
 from data_utils import store_data
 
 def game():
-        agent1_move = get_prediction_agent_action()
-        agent2_move = Cicle_agent.get_move()
+        agent1_move = get_prediction_agent_action('RPSLS_dict')
+        agent2_move = Cicle_agent.get_move('RPSLS_dict')
         result = rpsls.assess_game(agent1_move, agent2_move).name
 
         store_data(agent1_move, agent2_move, result)
@@ -18,7 +18,7 @@ def game():
 if __name__ == '__main__':
     try:
         os.system('cls' if os.name == 'nt' else 'clear')
-        print('\n\t\t\033[1mROCK PAPER SCISSORS\033[0m')
+        print('\n\t\t\033[1mROCK PAPER SCISSORS LIZARD SPOCK\033[0m')
         number_of_games = int(input('Input a number of games: '))
         for i in range(number_of_games):
             print('\n=====  \033[1;93mGAME %i\033[0m  =====' % (i + 1))
