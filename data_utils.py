@@ -2,11 +2,11 @@ import pandas as pd
 import pathlib as p
 
 #History route
-ROUTE = './src/'
-HISTORY = './src/history.csv'
+ROUTE = './src/history'
+TAIL = '.csv'
 
-def get_data():
-    file = p.Path(HISTORY)
+def get_data(name):
+    file = p.Path(ROUTE + '/' + name + TAIL)
     route = p.Path(ROUTE)
 
     if not route.is_dir():
@@ -14,11 +14,11 @@ def get_data():
          mkdir(ROUTE)
 
     if file.is_file():
-        return pd.read_csv(HISTORY)
+        return pd.read_csv(ROUTE + '/' + name + TAIL)
     else:
         return pd.DataFrame(columns=('agent_move', 'rival_move', 'result'))
 
-def store_data(agent_move, rival_move, result):
-    data = get_data()
+def store_data(agent_move, rival_move, result, name):
+    data = get_data(name)
     data.loc[len(data)] = list((agent_move, rival_move, result))
-    data.to_csv(HISTORY, index=False)
+    data.to_csv(ROUTE + '/' + name + TAIL, index=False)

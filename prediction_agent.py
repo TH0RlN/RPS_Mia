@@ -9,7 +9,7 @@ def get_victory_action(move, game):
 
 def get_prediction_agent_action(game):
     rps = __import__(game)
-    data = get_data()
+    data = get_data(game)
 
     if len(data) > 4:
         last_game = data.tail(1)
