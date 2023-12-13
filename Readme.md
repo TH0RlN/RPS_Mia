@@ -27,7 +27,7 @@ Optei por un axente reactivo baseado en modelos. O meu axente toma o historial d
 
 ### Implementación
 
-A implentación de este axente está realizada en Python 3.12 apoiandose na librería Pandas e no código aportado por dfleta no seu repositorio de RPS (lixeiramente modificado para adaptarse as nosas necesidades).
+A implentación de este axente está realizada en [Python 3.12](https://www.python.org/downloads/release/python-3120/) apoiandose na librería [Pandas](https://pandas.pydata.org/) e no código aportado por [dfleta](https://github.com/dfleta) no seu repositorio de [RPS](https://github.com/dfleta/pedra-papel-tesoira) (lixeiramente modificado para adaptarse as nosas necesidades). Todo o meu código atópase no [repositorio do proxecto](https://github.com/TH0RlN/RPS_Mia).
 
 ### Extensión - Pedra Papel Tesoiras Lagarto Spock (RPSLS)
 
