@@ -1,8 +1,8 @@
-### RPS Mia
+# Agente Inteligente para RPS
 
-Crear un modelo que intente ganar a **piedra** (R), **papel** (P) o **tijera** (S)
 
-1. Definir el entorno
-2. Diagrama esquemático (definir arquetipo)
-3. Seleccionar Algoritmia
-4. Programar
+
+### Contorno de tarefas
+| Contorno de tarefas |  Observable  | Axentes | Determinista | Episódico | Estático | Discreto |  Coñecido  |
+| :-----------------: | :----------: | :-----: | :----------: | :--------: | :-------: | :------: | :----------: |
+|         RPS         | Parcialmente |  Multi  | Estocástico | Episódico | Estático | Discreto | Descoñecido |
