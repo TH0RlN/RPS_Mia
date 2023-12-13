@@ -2,7 +2,7 @@ import pandas as pd
 import pathlib as p
 
 #History route
-ROUTE = '../media/history'
+ROUTE = 'media/history'
 TAIL = '.csv'
 
 # Retrieves the data from the csv
