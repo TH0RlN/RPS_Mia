@@ -3,14 +3,14 @@ from data_utils import get_data
 
 # Given a game and a predicted move, it returns the best move against it
 def get_victory_action(move, game):
-    rps = __import__(game)
+    rps = __import__(game + '_dict')
     for action in rps.GameAction:
         if not rps.assess_game(action, move):
              return action  
 
 # This function computes the best move for the game based on the previous game and the history
 def get_prediction_agent_action(game):
-    rps = __import__(game)
+    rps = __import__(game + '_dict')
     data = get_data(game)
 
     if len(data) > 4:

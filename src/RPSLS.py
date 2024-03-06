@@ -5,8 +5,9 @@ from cicle_agent import Cicle_agent
 from data_utils import store_data
 
 def game():
-        agent1_move = get_prediction_agent_action('RPSLS_dict')
-        agent2_move = Cicle_agent.get_move('RPSLS_dict')
+        TYPE_OF_GAME = 'RPSLS'
+        agent1_move = get_prediction_agent_action(TYPE_OF_GAME)
+        agent2_move = Cicle_agent.get_move(TYPE_OF_GAME)
         result = rpsls.assess_game(agent1_move, agent2_move).name
 
         store_data(agent1_move, agent2_move, result, 'rpsls')
