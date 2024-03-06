@@ -10,7 +10,7 @@ def game():
         agent2_move = Cicle_agent.get_move(TYPE_OF_GAME)
         result = rpsls.assess_game(agent1_move, agent2_move).name
 
-        store_data(agent1_move, agent2_move, result, 'rpsls')
+        store_data(agent1_move, agent2_move, result, TYPE_OF_GAME)
         print('Agent 1 move is %s' % (rpsls.GameAction(agent1_move).name))
         print('Agent 2 move is %s' % (rpsls.GameAction(agent2_move).name))
         print(result)
