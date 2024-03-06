@@ -30,7 +30,7 @@ Optei por un axente reactivo baseado en modelos. O meu axente toma o historial d
 
 A implentación de este axente está realizada en [Python 3.11](https://www.python.org/downloads/release/python-3120/) apoiandose na librería [Pandas](https://pandas.pydata.org/) e no código aportado por [dfleta](https://github.com/dfleta) no seu repositorio de [RPS](https://github.com/dfleta/pedra-papel-tesoira) (lixeiramente modificado para adaptarse as nosas necesidades). Todo o meu código atópase no [repositorio do proxecto](https://github.com/TH0RlN/RPS_Mia).
 
-Apórtase un arhcivo enviroment.yml para poder replicar a contorna que se utilizou á hora de ser desenvolvido.
+Apórtase un arhcivo [enviroment.yml](https://github.com/TH0RlN/RPS_Mia/blob/master/environment.yml "Arquivo configuracion contorna") para poder replicar a contorna que se utilizou á hora de ser desenvolvido.
 
 Ademáis achégase un axente ciclico ao que poder enfrentar ao noso axente.
 
