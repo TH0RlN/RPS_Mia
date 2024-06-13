@@ -38,3 +38,26 @@ Ademáis achégase un axente ciclico ao que poder enfrentar ao noso axente.
 
 Engadiuse un diccionario extra, baseado no orixinal, que permite o uso do axente na versión extendida do xogo (RPSLS). A estructura do axente non precisa modificación para poder funcionar con esta versión extendida, mais precisa máis partidas para comenzar a ser efectivo ao ter máis posibilidades entre as que elixir.
 ![img](media/img/rpsls.png)
+
+### Ejecución y uso
+
+Crea un entorno conda con las especificaciones en *enviroment.yml*:
+
+```
+conda env create -f environment.yml
+conda activate RPS
+```
+
+Ejecuta el programa:
+
+RPS:
+
+```
+python src/rps.py
+```
+
+RPSLS:
+
+```
+python src/RPSLS.py
+```
